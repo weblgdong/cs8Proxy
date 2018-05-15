@@ -2,7 +2,9 @@ const Koa = require('koa')
 const app = new Koa()
 var request = require('request');
 const bodyParser = require('koa-bodyparser')
+const cors = require('koa2-cors');
 
+app.use(cors());
 app.use(async (ctx) => {
   let url = ctx.url
   let request = ctx.request
