@@ -13,7 +13,7 @@ app.use(async (ctx) => {
   if (ctx_method === "POST") {
     params = ctx.request.body;
   }
-  ctx.body = await proxyCS8('getHallImgByRandomNo.htm?randomNo=99', ctx_method);
+  ctx.body = await proxyCS8(url, ctx_method);
 })
 
 app.listen(3456)
